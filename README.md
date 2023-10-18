@@ -1,6 +1,9 @@
 # nfs2
 Need For Speed 2
 
+## This repository contains
+  - unofficial replay file format (.rpy)
+
 # References
 - https://github.com/vgarcia007/NFSIISE-Online-Ranking-Replay-Checker
   - https://garcias-garage.de/nfs2se-replay-checker
