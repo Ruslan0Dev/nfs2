@@ -3,6 +3,11 @@ Need For Speed 2
 
 ## This repository contains
   - unofficial replay file format (.rpy) (WIP. DRAFT!)
+## How can you help?
+- send replays (*.rpy file)
+  - the more replays, the better the patterns and all variants of variables are visible
+- send pool requests
+- send ideas via issues
 
 # References
 - https://github.com/vgarcia007/NFSIISE-Online-Ranking-Replay-Checker
