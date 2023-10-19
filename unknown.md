@@ -1,4 +1,7 @@
-
+# unknown data
+Here is unknown data. The table is made for convenient visual analysis of patterns.
+In the table, the column names are truncated to make the table fit on the screen.
+The original names of the columns are given below ("original fields"). The original names correspond to those in [rpy-nfs2replay.ksy](rpy-nfs2replay.ksy)
 # original fields
 - maybe__is_online
 - maybe__cheat
@@ -8,11 +11,11 @@
 - unk07
 - unk08
 - unk10
-- maybe_is_multiplayer
-- maybe_is_multiplayer_2
+- maybe__is_multiplayer
+- maybe__is_multiplayer_2
 - unk22
-- name1
-- name2
+- name1 ('+' means truncated bytes)
+- name2 ('+' means truncated bytes)
 - unk26_unstable
 - file
 # table
