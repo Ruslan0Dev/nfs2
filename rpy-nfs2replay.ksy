@@ -196,7 +196,18 @@ seq:
   - id: unk07_zero                               #pos: 0x48
     type: t_zero_4
     repeat: expr
-    repeat-expr: 4
+    repeat-expr: 2
+  # ----------------------------------------------------------------------------
+  - id: unk07                                    #pos: 0x50
+    size: 4
+    valid:
+      any-of:
+        - '[0x00, 0x00, 0x00, 0x00]'
+        - '[0x01, 0x00, 0x00, 0x00]'
+        # test_replays\philipp\LR_F1_bw.rpy
+  # ----------------------------------------------------------------------------
+  - id: unk07_always_0                           #pos: 0x54
+    contents: [0x00, 0x00, 0x00, 0x00]
   # ----------------------------------------------------------------------------
   - id: unk08                                    #pos: 0x58
     size: 4
@@ -233,7 +244,7 @@ seq:
     # 5 - no opp (1) + traff (4)
     # 6 - 1 opp (2) + traff (4)
   # ----------------------------------------------------------------------------
-  - id: maybe_is_multiplayer                     #pos: 0x6C
+  - id: maybe__is_multiplayer                     #pos: 0x6C
     type: u4
     enum: e_multiplayer
     valid:
@@ -251,7 +262,7 @@ seq:
       #   - 1 # one
       #   - 7 # full grid
   # ----------------------------------------------------------------------------
-  - id: opponent_car                             #pos: 0x74
+  - id: opponents__car                             #pos: 0x74
     type: u4
     enum: e_opponent_car
     valid:
@@ -310,7 +321,7 @@ seq:
     type: u4
     enum: e_color
   # ----------------------------------------------------------------------------
-  - id: maybe_is_multiplayer_2                   #pos: 0x88
+  - id: maybe__is_multiplayer_2                   #pos: 0x88
     type: u4
     valid:
       any-of:
@@ -381,7 +392,7 @@ seq:
     type: t_players_reserved
     size: 64 * 12 # max players
   # ----------------------------------------------------------------------------
-  - id: always_zero_1                            #pos: 0x3AC
+  - id: always_zero                              #pos: 0x3AC
     type: t_zero_4
     repeat: expr
     repeat-expr: 52
