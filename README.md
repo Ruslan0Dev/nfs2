@@ -20,3 +20,5 @@ Need For Speed 2
 - https://tcrf.net/Proto:Need_for_Speed_II
 - https://www.nfseditor.de/replays/nfs2rpl.html
 - https://github.com/AndyGura/nfs-resources-converter
+- https://github.com/hmlendea/nfs2tools/wiki
+- https://github.com/hmlendea/nfs2re
