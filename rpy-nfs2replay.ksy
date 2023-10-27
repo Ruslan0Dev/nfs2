@@ -88,9 +88,18 @@ seq:
   - id: unk01_always_2                           #pos: 0x1C
     contents: [0x02, 0x00, 0x00, 0x00]
   # ----------------------------------------------------------------------------
-  - id: maybe__cheat                             #pos: 0x20
+  - id: cheat                                    #pos: 0x20
+    # https://gamefaqs.gamespot.com/ps/198112-need-for-speed-ii/cheats
+    # https://stopgame.ru/show/2701/need_for_speed_2_special_edition_cheats
     type: u4
-    enum: e_state
+    enum: e_cheat
+    valid:
+      any-of:
+        - e_cheat::no_cheat_codes
+        - e_cheat::pioneer
+        - e_cheat::slip
+        - e_cheat::pioneer_and_slip
+        - e_cheat::maybe_temporary_cheat_code
   # ----------------------------------------------------------------------------
   - id: location__track                          #pos: 0x24
     type: u4
@@ -302,6 +311,10 @@ seq:
         - e_car::bomber_bfs
         - e_car::tombstone
         - e_car::fzr_2000
+        - e_car::cheat_go21
+        - e_car::cheat_vip
+        - e_car::cheat_go51
+        - e_car::cheat_schoolzone
   # ----------------------------------------------------------------------------
   - id: unk11_always_1                           #pos: 0x7C
     size: 4
@@ -700,6 +713,13 @@ enums:
     0x01: no
     0x02: yes
 
+  e_cheat:                             #TODO
+    0x00: no_cheat_codes
+    0x04: pioneer                      # Pioneer
+    0x08: slip                         # Slip
+    0x0C: pioneer_and_slip             # Pioneer and slip
+    1028: maybe_temporary_cheat_code   # maybe temporary cheat code like car for current race
+
   # opponents
   e_skill_level:
     0x00: beginner
@@ -734,13 +754,16 @@ enums:
     # ... #TODO
     18: unknown18
     19: unknown19
-    21: unknown21
+    20: cheat_schoolzone
+    21: cheat_go21          # Tractor Trailer
     25: unknown25
     28: unknown28
     29: unknown29
     30: unknown30
     31: unknown31
     32: unknown32
+    35: cheat_vip           # limo
+    51: cheat_go51          # block of rock
 
   e_opponent_car:
     0: mc_laren_f1          # McLaren F1
