@@ -158,11 +158,9 @@ seq:
     size: 4
     valid:
       any-of:
-        - '[0, 0, 0, 0]' #KSY BUG? Temporary solution
-        - '[0x00, 0x00, 0x00, 0x00, 0x00]'
+        - '[0x00, 0x00, 0x00, 0x00]'
         # often
-        - '[5, 0, 0, 0]' #KSY BUG? Temporary solution
-        - '[0x05, 0x00, 0x00, 0x00, 0x00]'
+        - '[0x05, 0x00, 0x00, 0x00]'
         # 05 00 00 00  Bw Proving Grounds 0.48.71 (Lap 2).rpy
         # 05 00 00 00  myst_unknowncar.rpy
         # 05 00 00 00  north_8_lap.rpy
